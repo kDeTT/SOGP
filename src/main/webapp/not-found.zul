@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?link  rel="stylesheet" type="text/css" href="css/sogp.css"?>
+<?link  rel="stylesheet" type="text/css" href="css/redirect-page.css"?>
+
+<zk xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:z="http://www.zkoss.org/2005/zul">
+    
+    <div class="box-center">
+        <z:hbox>
+            <img src="img/not-found.png" />
+            <z:vbox class="box-right-align">
+                <hgroup>
+                    <h1>Opss!</h1>
+                    <h3>O conteúdo acessado não foi encontrado.</h3>
+                </hgroup>
+            </z:vbox>
+        </z:hbox>
+    </div>
+    
+    <footer>
+        <a href="http://www.ufjf.br" target="_blank">
+            <img src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
+        </a>
+    </footer>
+</zk>

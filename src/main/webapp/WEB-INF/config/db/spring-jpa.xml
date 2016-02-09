@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/tx
+                            http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <ctx:component-scan base-package="bd" />
+    <ctx:annotation-config />
+    
+    <!-- JPA Integra -->
+    <bean id="entityManagerFactorySogp" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceXmlLocation" value="/WEB-INF/config/db/persistence.xml"/>
+        <property name="persistenceUnitName" value="sogpPU"/>
+    </bean>
+    
+    <bean id="transactionManagerSogp" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactorySogp"/>
+    </bean>
+    
+    <tx:annotation-driven transaction-manager="transactionManagerSogp" />
+    <!--<tx:annotation-driven mode="aspectj" />-->
+</beans>

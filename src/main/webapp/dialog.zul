@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:z="http://www.zkoss.org/2005/zul">
+    
+    <z:window id="windowMenu" title="@bind(vm.titleWindow)" 
+              mode="modal" maximizable="false" minimizable="false" closable="true" 
+              position="center,center" border="normal" 
+              apply="org.zkoss.bind.BindComposer" 
+              viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.DialogViewModel')">
+        
+        <z:div id="divContent">
+            
+        </z:div>
+    </z:window>
+</zk>

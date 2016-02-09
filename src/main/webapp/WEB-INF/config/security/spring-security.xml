@@ -1,0 +1,44 @@
+<b:beans xmlns="http://www.springframework.org/schema/security"
+         xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                             http://www.springframework.org/schema/beans/spring-beans.xsd
+                             http://www.springframework.org/schema/security
+                             http://www.springframework.org/schema/security/spring-security.xsd">
+    
+    <b:bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter">
+        <b:constructor-arg ref="roleHierarchy" />
+    </b:bean>
+    
+    <b:bean id="roleHierarchy" class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">
+        <b:property name="hierarchy">
+            <b:value>
+                ROLE_ADMIN > ROLE_USER
+            </b:value>
+        </b:property>
+    </b:bean>
+    
+    <http pattern="/zkau/**" security="none"/>
+
+    <http auto-config="true" >
+        <form-login login-page="/index.zul"
+                    default-target-url="/home.zul"/>
+
+        <access-denied-handler error-page="/denied.zul" />
+        
+        <intercept-url pattern="/" access="permitAll" />
+        <intercept-url pattern="/home.zul" access="hasAnyRole('ADMIN', 'USER', 'XXX')" />
+        <intercept-url pattern="/admin.zul" access="hasRole('ADMIN')" />
+    </http>
+  
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="adminxxx" password="12345" authorities="ROLE_XXX" />
+                <user name="adminuser" password="12345" authorities="ROLE_ADMIN, ROLE_USER" />
+                <user name="admin" password="12345" authorities="ROLE_ADMIN" />
+                <user name="user" password="12345" authorities="ROLE_USER" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+</b:beans>

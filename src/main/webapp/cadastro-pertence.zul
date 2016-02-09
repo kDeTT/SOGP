@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:z="http://www.zkoss.org/2005/zul">
+    
+    <z:div apply="org.zkoss.bind.BindComposer" 
+           viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.CadastroPertenceViewModel')">
+        
+<z:button onClick="@command('openNew')">Abrir</z:button>
+        <z:button onClick="@command('close')">Fechar</z:button>
+    </z:div>
+</zk>
