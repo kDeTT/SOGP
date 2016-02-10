@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?link  rel="stylesheet" type="text/css" href="../css/top-bar.css"?>
+
 <zk xmlns="http://www.w3.org/1999/xhtml"
     xmlns:z="http://www.zkoss.org/2005/zul">
     
     <z:div apply="org.zkoss.bind.BindComposer" 
            viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.IndexViewModel')">
-           
+        
+        <div>
+            <z:include src="top-bar.zul" />
+        </div>
         Hello, you is admin!
-        <button onclick="formLogout.submit();">Sair</button>
     </z:div>
 </zk>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:z="http://www.zkoss.org/2005/zul">
+
+    <z:div apply="org.zkoss.bind.BindComposer" 
+           viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.TopBarViewModel')">
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <img id="imgLogo" class="img-size" src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
+            </div>
+            <div class="top-bar-center">
+                <h3 class="title">SOGP - Sistema de Organização e Gerenciamento de Pertences</h3>
+                
+<!--                <div class="div-center">
+                    <h3 class="title">SOGP - Sistema de Organização e Gerenciamento de Pertences</h3>
+                </div>-->
+                
+<!--                <div class="div-inline">
+                    
+                </div>-->
+            </div>
+            <div class="top-bar-right">
+                <ul class="nav">
+                    <li class="drop">
+                        <div class="text-center">
+                            <z:label value="@bind(vm.username)" />
+                        </div>
+                        <ul>
+                            <li>
+                                <form  id="formLogout" action="../logout" method="POST">
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                </form>
+                                <a onclick="formLogout.submit();">Sair</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </z:div>
+</zk>

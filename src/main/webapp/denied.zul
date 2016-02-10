@@ -12,15 +12,17 @@
             <z:vbox class="box-right-align">
                 <hgroup>
                     <h1>Opss!</h1>
-                    <h3>Você não tem acesso para acessar este conteúdo.</h3>
+                    <h3>Você não tem permissão para acessar este conteúdo.</h3>
                 </hgroup>
             </z:vbox>
         </z:hbox>
     </div>
     
-    <footer>
-        <a href="http://www.ufjf.br" target="_blank">
-            <img src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
-        </a>
-    </footer>
+    <div class="div-bottom">
+        <footer>
+            <a href="http://www.ufjf.br" target="_blank">
+                <img src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
+            </a>
+        </footer>
+    </div>
 </zk>

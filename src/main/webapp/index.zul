@@ -12,7 +12,7 @@
             <h1>SOGP</h1>
             <h3>Sistema de Gerenciamento de Pertences</h3>
         </hgroup>
-        <form id="f" name="f" class="box-center" action="login" method="POST">
+        <form id="formLogin" name="formLogin" class="box-center" action="login" method="POST">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             
             <div class="group">
@@ -25,10 +25,12 @@
             </div>
             <button type="submit" class="button buttonBlue">Entrar</button>
         </form>
-        <footer>
-            <a href="http://www.ufjf.br" target="_blank">
-                <img src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
-            </a>
-        </footer>
+        <div class="div-bottom">
+            <footer>
+                <a href="http://www.ufjf.br" target="_blank">
+                    <img src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
+                </a>
+            </footer>
+        </div>
     </z:div>
 </zk>

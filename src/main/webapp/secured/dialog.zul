@@ -4,8 +4,8 @@
     xmlns:z="http://www.zkoss.org/2005/zul">
     
     <z:window id="windowMenu" title="@bind(vm.titleWindow)" 
-              mode="modal" maximizable="false" minimizable="false" closable="true" 
-              position="center,center" border="normal" 
+              mode="modal" maximizable="true" minimizable="true" closable="true"
+              position="center,center"
               apply="org.zkoss.bind.BindComposer" 
               viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.DialogViewModel')">
         

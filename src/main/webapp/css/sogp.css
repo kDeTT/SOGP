@@ -20,9 +20,10 @@ h1 { color: #636363; }
 
 h3 { color: #4a89dc; }
 
-.box-center {
-    width: 380px;
-    margin: 4.2em auto;
+.box-center 
+{
+    width: 30%;
+    margin: 5em auto;
     padding: 3em 2em 2em 2em;
     background: #fafafa;
     border: 1px solid #ebebeb;
@@ -210,6 +211,15 @@ input:focus ~ .highlight {
     }
 }
 
+.div-bottom
+{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    /*height:30px;*/
+    width:100%;
+}
+
 footer { 
     text-align: center; 
     background: black;
@@ -234,10 +244,24 @@ footer a:hover {
 }
 
 footer img {
-    width: 80px;
+    width: 50px;
     transition: all .2s ease;
 }
 
 footer img:hover { opacity: .50; }
 
 footer img:focus , footer a:focus { outline: none; }
+
+@media screen and (max-width : 780px) 
+{
+    body
+    {
+        overflow: auto;
+    }
+
+    .box-center 
+    {
+        width: auto;
+        margin: 2em 1em 6em 1em;
+    }
+}

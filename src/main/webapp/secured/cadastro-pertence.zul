@@ -5,8 +5,7 @@
     
     <z:div apply="org.zkoss.bind.BindComposer" 
            viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.CadastroPertenceViewModel')">
-        
-<z:button onClick="@command('openNew')">Abrir</z:button>
+
         <z:button onClick="@command('close')">Fechar</z:button>
     </z:div>
 </zk>

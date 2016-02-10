@@ -1,6 +1,6 @@
 .box-center {
     width: 500px;
-    margin: 11.2em auto;
+    margin: 12em auto;
     padding: 2em;
     background: #fafafa;
     border: 1px solid #ebebeb;
@@ -28,4 +28,31 @@ p {
 
 .box-center img {
     margin-top: 0.7em;
+}
+
+@media screen and (max-width : 580px) 
+{
+    body
+    {
+        overflow: hidden;
+    }
+    
+    .box-center
+    {
+        width: 22em;
+        margin: 7.5em auto !important;
+    }
+
+    .box-center img {
+        width: 0px;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width : 780px) 
+{
+    .box-center 
+    {
+        margin: 1em auto;
+    }
 }

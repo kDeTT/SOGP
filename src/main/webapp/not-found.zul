@@ -18,9 +18,11 @@
         </z:hbox>
     </div>
     
-    <footer>
-        <a href="http://www.ufjf.br" target="_blank">
-            <img src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
-        </a>
-    </footer>
+    <div class="div-bottom">
+        <footer>
+            <a href="http://www.ufjf.br" target="_blank">
+                <img src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
+            </a>
+        </footer>
+    </div>
 </zk>

@@ -21,7 +21,6 @@ import org.zkoss.zul.Window;
 public class DialogViewModel
 {
     private String titleWindow;
-    private static Window wnd;
 
     @Wire
     private Window windowMenu;
@@ -36,8 +35,6 @@ public class DialogViewModel
         
         try
         {
-            wnd = windowMenu;
-            
             HashMap<String, Object> paramList = new HashMap<>();
             
             paramList.put("windowMenu", windowMenu);
@@ -50,12 +47,6 @@ public class DialogViewModel
         {
             Messagebox.show(ex.getMessage(), "Erro", Messagebox.OK, Messagebox.ERROR);
         }
-    }
-
-    @Command
-    public void close()
-    {
-        wnd.detach();
     }
 
     /**
