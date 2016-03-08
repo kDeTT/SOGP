@@ -1,5 +1,6 @@
 package bd.ufjf.sogp.viewmodel;
 
+import bd.ufjf.sogp.controller.GlobalPropertySystem;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.zkoss.bind.annotation.AfterCompose;
 import org.zkoss.bind.annotation.ContextParam;
@@ -20,7 +21,8 @@ public class TopBarViewModel
     {
         Selectors.wireComponents(view, this, false);
         
-        this.username = SecurityContextHolder.getContext().getAuthentication().getName().toUpperCase();
+        GlobalPropertySystem.USERNAME = SecurityContextHolder.getContext().getAuthentication().getName();
+        this.username = GlobalPropertySystem.USERNAME.toUpperCase();
     }
 
     /**

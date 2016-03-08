@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:z="http://www.zkoss.org/2005/zul">
+
+    <z:div>
+        <div id="divMenuBar" class="menu-left">
+            <ul>
+                <li>
+                    <z:a onClick="@command('openContent', zulFile = 'list-pertence.zul'); showHideMenu()">
+                        <div>
+                            PERTENCES
+                        </div>
+                    </z:a>
+                </li>
+                <li>
+                    <z:a onClick="@command('openContent', zulFile = 'list-autorizacao.zul')">
+                        <div>
+                            AUTORIZADOS
+                        </div>
+                    </z:a>
+                </li>
+<!--                <li>
+                    <z:a onClick="@command('openContent', zulFile = '../denied.zul')">
+                        <div>
+                            CLICK ME!
+                        </div>
+                    </z:a>
+                </li>-->
+            </ul>
+        </div>
+    </z:div>
+</zk>

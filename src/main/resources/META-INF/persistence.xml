@@ -3,6 +3,55 @@
   <persistence-unit name="bd.ufjf_SOGP_war_1.0PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>bd.ufjf.sogp.model.SogpdbTest</class>
+    <class>bd.ufjf.sogp.model.Livro</class>
+    <class>bd.ufjf.sogp.model.Alugado</class>
+    <class>bd.ufjf.sogp.model.Aquisicao</class>
+    <class>bd.ufjf.sogp.model.Pessoa</class>
+    <class>bd.ufjf.sogp.model.PalavraChave</class>
+    <class>bd.ufjf.sogp.model.Vendido</class>
+    <class>bd.ufjf.sogp.model.Doacao</class>
+    <class>bd.ufjf.sogp.model.Filme</class>
+    <class>bd.ufjf.sogp.model.Musica</class>
+    <class>bd.ufjf.sogp.model.Pertence</class>
+    <class>bd.ufjf.sogp.model.Heranca</class>
+    <class>bd.ufjf.sogp.model.Compra</class>
+    <class>bd.ufjf.sogp.model.Propriedade</class>
+    <class>bd.ufjf.sogp.model.Excluido</class>
+    <class>bd.ufjf.sogp.model.Dimensao</class>
+    <class>bd.ufjf.sogp.model.Disponivel</class>
+    <class>bd.ufjf.sogp.model.Tipo</class>
+    <class>bd.ufjf.sogp.model.PessoaJuridica</class>
+    <class>bd.ufjf.sogp.model.Emprestado</class>
+    <class>bd.ufjf.sogp.model.Fabricacao</class>
+    <class>bd.ufjf.sogp.model.PessoaFisica</class>
+    <class>bd.ufjf.sogp.model.Status</class>
+    <class>bd.ufjf.sogp.controller.Livro</class>
+    <class>bd.ufjf.sogp.controller.Dimensao</class>
+    <class>bd.ufjf.sogp.controller.Musica</class>
+    <class>bd.ufjf.sogp.controller.Fabricacao</class>
+    <class>bd.ufjf.sogp.controller.Doacao</class>
+    <class>bd.ufjf.sogp.controller.Excluido</class>
+    <class>bd.ufjf.sogp.controller.Pertence</class>
+    <class>bd.ufjf.sogp.controller.Heranca</class>
+    <class>bd.ufjf.sogp.controller.Emprestado</class>
+    <class>bd.ufjf.sogp.controller.Sogpdbtest</class>
+    <class>bd.ufjf.sogp.controller.Filme</class>
+    <class>bd.ufjf.sogp.controller.Pessoa</class>
+    <class>bd.ufjf.sogp.controller.PalavraChave</class>
+    <class>bd.ufjf.sogp.controller.PessoaJuridica</class>
+    <class>bd.ufjf.sogp.controller.Vendido</class>
+    <class>bd.ufjf.sogp.controller.Aquisicao</class>
+    <class>bd.ufjf.sogp.controller.Status</class>
+    <class>bd.ufjf.sogp.controller.Propriedade</class>
+    <class>bd.ufjf.sogp.controller.PessoaFisica</class>
+    <class>bd.ufjf.sogp.controller.Tipo</class>
+    <class>bd.ufjf.sogp.controller.Compra</class>
+    <class>bd.ufjf.sogp.controller.Alugado</class>
+    <class>bd.ufjf.sogp.controller.Disponivel</class>
+    <class>bd.ufjf.sogp.model.Pessoajuridica</class>
+    <class>bd.ufjf.sogp.model.Pessoafisica</class>
+    <class>bd.ufjf.sogp.model.Palavrachave</class>
+    <class>bd.ufjf.sogp.model.Sociedade</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sogpdb?zeroDateTimeBehavior=convertToNull"/>

@@ -6,6 +6,14 @@
                              http://www.springframework.org/schema/security
                              http://www.springframework.org/schema/security/spring-security.xsd">
     
+    <b:bean id="sogpDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <b:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <b:property name="url" value="jdbc:mysql://localhost:3307/sogpdbfinal" />
+        <b:property name="username" value="sogp" />
+        <b:property name="password" value="sogp12345" />
+    </b:bean>
+
+    
     <b:bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
         <b:constructor-arg>
             <b:bean class="org.springframework.security.web.access.expression.WebExpressionVoter">
@@ -21,15 +29,12 @@
     <b:bean id="roleHierarchy" class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">
         <b:property name="hierarchy">
             <b:value>
-                ROLE_XXX > ROLE_ADMIN
                 ROLE_ADMIN > ROLE_USER
             </b:value>
         </b:property>
     </b:bean>
   
     <http pattern="/zkau/**" security="none"/>
-    <!--    <http pattern="/css/**" security="none"/>
-    <http pattern="/js/**" security="none"/>-->
 
     <http auto-config="true" access-decision-manager-ref="accessDecisionManager">
         <form-login login-page="/index.zul"
@@ -42,16 +47,13 @@
         <intercept-url pattern="/secured/admin.zul" access="hasRole('ADMIN')" />
         <intercept-url pattern="/secured/**" access="isAuthenticated()" />
     </http>
-  
+
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="adminqwertyuiopasdfghjklzxcvbnm" password="12345" authorities="ROLE_XXX" />
-                <user name="adminxxx" password="12345" authorities="ROLE_XXX" />
-                <user name="adminuser" password="12345" authorities="ROLE_ADMIN, ROLE_USER" />
-                <user name="admin" password="12345" authorities="ROLE_ADMIN" />
-                <user name="user" password="12345" authorities="ROLE_USER" />
-            </user-service>
+            <password-encoder hash="md5" />
+            <jdbc-user-service data-source-ref="sogpDataSource" 
+                               users-by-username-query="SELECT login AS username, senha AS password, 'true' as enabled FROM pessoa WHERE login = ?"
+                               authorities-by-username-query="SELECT login AS username, permissao AS authority FROM pessoa WHERE login = ?" />
         </authentication-provider>
     </authentication-manager>
 </b:beans>

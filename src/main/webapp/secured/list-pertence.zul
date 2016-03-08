@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:z="http://www.zkoss.org/2005/zul">
+    
+    <z:div apply="org.zkoss.bind.BindComposer" 
+           viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.ListPertenceViewModel')">
+
+       <div class="div-content-options">
+            <div class="div-left">
+                <z:hbox>
+                    <z:button sclass="btnMetro btnMetro-blue" onClick="">Cadastrar</z:button>
+                    <z:button sclass="btnMetro btnMetro-blue" onClick="">Detalhes</z:button>
+                </z:hbox>
+            </div>               
+            <div class="div-right">
+                <z:hbox>
+                    <z:textbox class="txtBoxMetro-large" value="Pesquisar" />
+                    <z:button class="btnMetro btnMetro-width-small btnMetro-blue">OK</z:button>
+                </z:hbox>
+                
+            </div>
+        </div>
+                                        
+        <z:div style="margin: 0em 0.5em">
+            <z:label value="@load(vm.pertenceLabelCount)" />
+            
+            <div style="margin: 0.5em 0em">
+                <z:listbox mold="paging" pageSize="10"
+                           model="@load(vm.pertenceList)"  selectedItem="@bind(vm.pertenceSelected)">
+                    <z:listhead>  
+                        <z:listheader>
+                            <z:label sclass="zk-listboxheader-text">Nome</z:label>
+                        </z:listheader>
+                        <z:listheader>
+                            <z:label sclass="zk-listboxheader-text">Descrição</z:label>
+                        </z:listheader>
+                        <z:listheader>
+                            <z:label sclass="zk-listboxheader-text">Quantidade</z:label>
+                        </z:listheader>
+                        <z:listheader>
+                            <z:label sclass="zk-listboxheader-text">Valor</z:label>
+                        </z:listheader>
+                        <z:listheader>
+                            <z:label sclass="zk-listboxheader-text">Tipo</z:label>
+                        </z:listheader>
+                        <z:listheader>
+                            <z:label sclass="zk-listboxheader-text">Status</z:label>
+                        </z:listheader>
+                    </z:listhead>
+                    <z:template name="model">
+                        <z:listitem>
+                            <z:listcell label="${each.nome}"/>
+                            <z:listcell label="${each.descricao}"/>
+                            <z:listcell label="${each.quantidade}"/>
+                            <z:listcell label="${each.valorAtual}"/>
+                            <z:listcell label="${each.tipoList[0].nome}"/>
+                            <z:listcell label="${each.propriedadeList[0].codStatus.tipoStatus}"/>
+                        </z:listitem>
+                    </z:template>
+                </z:listbox>
+            </div>
+        </z:div>
+    </z:div>
+</zk>

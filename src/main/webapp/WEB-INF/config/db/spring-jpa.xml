@@ -12,8 +12,7 @@
 
     <ctx:component-scan base-package="bd" />
     <ctx:annotation-config />
-    
-    <!-- JPA Integra -->
+
     <bean id="entityManagerFactorySogp" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceXmlLocation" value="/WEB-INF/config/db/persistence.xml"/>
         <property name="persistenceUnitName" value="sogpPU"/>
@@ -24,5 +23,4 @@
     </bean>
     
     <tx:annotation-driven transaction-manager="transactionManagerSogp" />
-    <!--<tx:annotation-driven mode="aspectj" />-->
 </beans>

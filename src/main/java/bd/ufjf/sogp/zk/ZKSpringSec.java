@@ -1,4 +1,4 @@
-package bd.ufjf.sogp.controller.zk;
+package bd.ufjf.sogp.zk;
 
 import java.util.ArrayList;
 import java.util.Collection;

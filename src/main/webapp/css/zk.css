@@ -1,0 +1,108 @@
+/***************************** ZK CSS *****************************************/
+
+.div-content-options
+{
+    display: block;
+    margin: 1em 3em;
+    height: 2em;
+}
+
+.div-left
+{
+    float: left;
+}
+
+.div-right
+{
+    float: right;
+}
+
+.txtBoxMetro-large
+{
+    min-height: 30px !important;
+}
+
+.btnMetro.z-button 
+{
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    min-height: 30px;
+    border: 1px solid #a9a9a9;
+    border-radius: 0px;
+    padding: 3px 12px;
+    line-height: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: white;
+    text-shadow: none;
+    margin: 0px 2px;
+    min-width: 75px;
+}
+
+.btnMetro-blue
+{
+    background: #4d90fe;
+}
+
+.btnMetro-blue.z-button:hover
+{
+    background: #0362fd; 
+}
+
+.btnMetro-blue.z-button:focus
+{
+    background: #0362fd; 
+}
+
+.z-listbox 
+{
+    border: none;
+    overflow: hidden;
+    zoom: 1;
+    text-align: center;
+}
+
+.z-listbox-header table th
+{
+    text-align: center;
+}
+
+.zk-listboxheader-text
+{
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px;
+}
+
+.z-listheader 
+{
+    border-left: none;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 0;
+    background: white;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media screen and (max-width : 580px) 
+{
+    .div-left
+    {
+        float: none;
+        width: 10em;
+        margin: 0.5em auto;
+    }
+
+    .div-right
+    {
+        float: none;
+        width: 15em;
+        margin: 0.5em auto;
+    }
+}
+
+/*************************** END ZK CSS ***************************************/

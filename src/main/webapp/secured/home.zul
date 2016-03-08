@@ -3,6 +3,12 @@
 <?taglib uri="/WEB-INF/zkspringsec.tld" prefix="sec" ?>
 
 <?link  rel="stylesheet" type="text/css" href="../css/top-bar.css" ?>
+<?link  rel="stylesheet" type="text/css" href="../css/menu.css" ?>
+<?link  rel="stylesheet" type="text/css" href="../css/home.css" ?>
+<?link  rel="stylesheet" type="text/css" href="../css/zk.css" ?>
+
+<?script type="text/javascript" src="../js/jquery-2.2.0.min.js"?>
+<?script type="text/javascript" src="../js/sogp.js"?>
 
 <zk xmlns="http://www.w3.org/1999/xhtml"
     xmlns:z="http://www.zkoss.org/2005/zul">
@@ -11,17 +17,19 @@
            viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.HomeViewModel')">
         
         <div>
-            <z:include src="top-bar.zul" />
-        </div>
+            <div>
+                <z:include src="top-bar.zul" />
+            </div>
         
-<!--        <zk if="${sec:isAllGranted('ROLE_ADMIN, ROLE_USER')}">
-            YOU IS ADMIN AND USER
-        </zk>
-        
-        <zk if="${sec:isAnyGranted('ROLE_ADMIN, ROLE_USER')}">
-            YOU IS ADMIN OR USER
-        </zk>-->
+            <div>
+                <div>
+                    <z:include src="menu.zul" />
+                </div>
 
-        <z:button onClick="@command('openCadastroPertence')">Cadastrar Pertence</z:button>
+                <z:div id="divContent" class="div-content">
+                
+                </z:div>
+            </div>
+        </div>
     </z:div>
 </zk>

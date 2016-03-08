@@ -6,19 +6,18 @@
     <z:div apply="org.zkoss.bind.BindComposer" 
            viewModel="@id('vm') @init('bd.ufjf.sogp.viewmodel.TopBarViewModel')">
         <div class="top-bar">
+            <div class="top-bar-menu-collapse">
+                <a onclick="showHideMenu()">
+                    <div>
+                        MENU
+                    </div>
+                </a>
+            </div>
             <div class="top-bar-left">
                 <img id="imgLogo" class="img-size" src="http://www.ufjf.br/ufjf/files/2015/11/logo_ufjf_v12.png" />
             </div>
             <div class="top-bar-center">
                 <h3 class="title">SOGP - Sistema de Organização e Gerenciamento de Pertences</h3>
-                
-<!--                <div class="div-center">
-                    <h3 class="title">SOGP - Sistema de Organização e Gerenciamento de Pertences</h3>
-                </div>-->
-                
-<!--                <div class="div-inline">
-                    
-                </div>-->
             </div>
             <div class="top-bar-right">
                 <ul class="nav">
